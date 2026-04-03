@@ -346,16 +346,124 @@ footer {
 }
 
 /* RESPONSIVO */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+  header {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 3%;
+  }
+
+  .logo-wrapper {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .logo-text { font-size: 1rem; }
+  .logo-img { height: 40px; }
+
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+  }
+
+  .nav-links a {
+    font-size: 0.82rem;
+    padding: 4px 8px;
+  }
+
+  .btn-login, .btn-sair {
+    margin-top: 8px;
+    padding: 8px 12px;
+    font-size: 0.72rem;
+  }
+
+  .hero {
+    height: 50vh;
+    padding: 0 10px;
+  }
+
+  .hero h1 { font-size: 2.2rem; }
+
+  .hero p { font-size: 0.95rem; }
+
   .info {
     flex-direction: column;
+    padding: 30px 10px;
   }
 
-  .destaque {
-    transform: scale(1.03);
+  .card-info {
+    width: 100%;
+    margin-bottom: 16px;
+    padding: 20px;
   }
 
-  .hero h1 {
-    font-size: 1.8rem;
+  .destaque { transform: scale(1); }
+
+  .destaque h2 { font-size: 1.8rem; }
+
+  .destaque p { font-size: 0.95rem; }
+
+  .elenco-grid {
+    gap: 14px;
+    padding: 16px 5%;
   }
+
+  .player-card { min-width: 180px; }
+
+  .player-card img { height: 190px; }
+
+  .estadio { padding: 60px 5%; }
+
+  footer { padding: 25px 10px; }
+}
+
+@media (max-width: 768px) {
+  .hero h1 { font-size: 1.7rem; }
+
+  .btn-cta { padding: 12px 18px; }
+
+  .nav-links {
+    gap: 8px;
+  }
+
+  .info { padding: 20px 8px; }
+
+  .card-info { padding: 18px; }
+
+  .estadio p { font-size: 0.9rem; }
+
+  .player-card img { height: 170px; }
+}
+
+@media (max-width: 480px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .nav-links {
+    gap: 6px;
+    font-size: 0.78rem;
+    justify-content: center;
+  }
+
+  .logo-text { font-size: 0.95rem; }
+  .logo-img { height: 36px; }
+
+  .hero { height: 45vh; }
+  .hero h1 { font-size: 1.4rem; }
+
+  .hero p { font-size: 0.85rem; }
+
+  .btn-login, .btn-sair, .btn-cta { width: 100%; max-width: 260px; }
+
+  .elenco-grid { padding: 16px 4%; }
+  .player-card { min-width: 165px; }
+  .player-card h4 { font-size: 0.95rem; }
+
+  .card-info { padding: 14px; }
 }
