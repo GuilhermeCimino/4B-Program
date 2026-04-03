@@ -1,0 +1,227 @@
+/* --- VARIÁVEIS E RESET --- */
+:root {
+    --rosa: #FF66B2;
+    --preto: #000000;
+    --cinza: #121212;
+    --bg-card: #151515;
+    --branco: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: var(--preto);
+    color: var(--branco);
+    overflow-x: hidden;
+}
+
+/* --- HEADER (LOGO ESQUERDA | LINKS CENTRO | LOGIN DIREITA) --- */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 5%;
+    background: #000;
+    border-bottom: 2px solid var(--rosa);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-img { height: 45px; }
+.logo-text { font-size: 1.1rem; font-weight: bold; }
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    transition: .3s;
+}
+
+.nav-links a:hover { color: var(--rosa); }
+
+
+.btn-sair {
+  background-color: #ff4444; /* Vermelho para o botão de sair */
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px; /* Ajuste para ficar do mesmo tamanho do seu btn-login */
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 14px; /* Ajuste para combinar com o tamanho do texto do login */
+  text-transform: uppercase; /* Deixa em caixa alta igual ao seu LOGIN */
+  transition: background 0.2s;
+  margin-left: 0px; /* Dá um espacinho do botão de Login */
+}
+
+.btn-sair:hover {
+  background-color: #cc3333; /* Efeito de hover */
+}
+
+
+
+.btn-login {
+    border: 1px solid var(--rosa);
+    color: var(--rosa);
+    padding: 7px 22px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.btn-login:hover {
+    background: var(--rosa);
+    color: white;
+}
+
+
+/* --- HERO (BANNER ESTÁDIO) --- */
+.hero {
+    position: relative;
+    height: 75vh;
+    background:
+    linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.9)),
+    url('/midia/estadiodentro.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    padding: 60px 5%;
+}
+
+.hero-text { max-width: 600px; }
+.hero-text h1 {
+    font-size: 3rem;
+    color: var(--rosa);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.hero-text p { font-size: 1rem; color: #ddd; }
+
+/* --- HISTÓRIA DO ESTÁDIO --- */
+.history {
+    padding: 60px 5%;
+    background: linear-gradient(to bottom, rgba(18,18,18,0.8), rgba(18,18,18,1));
+    color: var(--branco);
+    border-top: 1px solid rgba(255,102,178,0.3);
+}
+
+.history h2 {
+    font-size: 2.5rem;
+    color: var(--rosa);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.history p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* --- GRID INFORMAÇÕES --- */
+.grid-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 60px 5%;
+}
+
+.card {
+    background: var(--cinza);
+    padding: 25px;
+    border-radius: 10px;
+    border-top: 4px solid var(--rosa);
+}
+
+/* --- BOTÃO --- */
+.btn-cta {
+    background: var(--rosa);
+    color: white;
+    padding: 14px 28px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 15px;
+    transition: .3s;
+}
+
+.btn-cta:hover { filter: brightness(1.2); }
+
+/* --- ESTÁDIO --- */
+.estadio {
+    padding: 80px 5%;
+    background: #080808;
+    text-align: center;
+}
+
+/* --- FOOTER --- */
+footer {
+    padding: 35px;
+    text-align: center;
+    border-top: 1px solid #333;
+    font-size: 14px;
+    color: #777;
+    background: #000;
+}
+
+/* ============================================================
+   MOBILE RESPONSIVE (SEM MUDAR O VISUAL)
+   ============================================================ */
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 2%;
+        gap: 15px;
+    }
+
+    .logo-wrapper { justify-content: center; width: 100%; }
+
+    .nav-links {
+        width: 100%;
+        overflow-x: auto;
+        padding: 5px 0;
+        justify-content: flex-start;
+        gap: 20px;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .nav-links::-webkit-scrollbar { display: none; }
+
+    .nav-links a { font-size: 0.8rem; white-space: nowrap; }
+
+    .btn-login-container { width: 100%; justify-content: center; }
+    .btn-login { width: 100%; text-align: center; }
+
+    .hero { height: 50vh; padding: 30px 5%; }
+    .hero-text h1 { font-size: 2rem; }
+
+    .grid-info { grid-template-columns: 1fr; padding: 30px 5%; }
+}

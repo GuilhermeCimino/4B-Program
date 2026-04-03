@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H4B</title>
+    
+    <link rel="stylesheet" href="noticias.css">
+</head>
+<body>
+
+<header>
+    <div class="logo-wrapper">
+<a href="/home.html">
+    <img src="/midia/logo.png" alt="Logo" class="logo-img">
+</a>
+        <div class="logo-text">
+            <strong>H4B</strong><span style="color:var(--rosa)">FootBall Club</span>
+        </div>
+    </div>
+    
+    <nav class="nav-links">
+        <a href="noticias.html">Notícias</a>
+        <a href="/jogos/jogos.html">Jogos</a>
+        <a href="/elenco/elenco.html">Elenco</a>
+        <a href="/estadio/estadio.html">Estádio</a>
+        <a href="/asnobet/asnobet.html">Asnos Bet</a>
+    </nav>
+
+    <a href="/login/login.html" class="btn-login">LOGIN</a>
+    <button onclick="deslogar()" class="btn-sair">SAIR</button>
+</header>
+
+<section id="noticias" class="noticias-container">
+    <h2 class="titulo-secao">ÚLTIMAS NOTÍCIAS</h2>
+
+    <div class="paginacao">
+        <span>«</span>
+        <span class="active">1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>...</span>
+        <span>651</span>
+        <span>»</span>
+    </div>
+
+    <div class="noticias-lista">
+        <article class="noticia-item">
+            <div class="noticia-img">
+                <img src="/midia/treino.png" alt="Treino">
+            </div>
+            <div class="noticia-info">
+                <span class="categoria">FUTEBOL - 18/03/2026 15:30h</span>
+                <h3 class="noticia-titulo">H4B F.C. FINALIZA PREPARAÇÃO PARA O CONFRONTO CONTRA O PALMEIRAS NO ALLIANZ PARQUE</h3>
+                <p class="noticia-resumo">A equipe comandada pelo técnico Fabrício Bruto realizou os últimos ajustes táticos nesta tarde visando a 25ª rodada do Brasileirão.</p>
+            </div>
+        </article>
+
+        <hr class="divisor">
+
+        <article class="noticia-item">
+            <div class="noticia-img">
+                <img src="/midia/anunciokaito.png" alt="Vitória">
+            </div>
+            <div class="noticia-info">
+                <span class="categoria">FUTEBOL - 17/03/2026 22:10h</span>
+                <h3 class="noticia-titulo">SASAKI KAITO É O NOVO REFORÇO DO H4B PARA A TEMPORADA</h3>
+                <p class="noticia-resumo">O H4B anunciou a contratação do atacante japonês Sasaki Kaito, considerado o maior jogador japonês de todos os tempos, como novo reforço para a temporada; com passagens marcantes por Barcelona e Kashima Antlers, o craque chega para elevar o nível do setor ofensivo da equipe, trazendo experiência internacional, técnica refinada e alto poder de decisão.</p>
+            </div>
+        </article>
+
+        <hr class="divisor">
+
+        <article class="noticia-item">
+            <div class="noticia-img">
+                <img src="/midia/azzuro.png" alt="Vitória">
+            </div>
+            <div class="noticia-info">
+                <span class="categoria">FUTEBOL - 16/03/2026 21:15h</span>
+                <h3 class="noticia-titulo">MUITO ALÉM DO JOGO: AZZURO E H4B APRESENTAM NOVA LINHA DE CAMISAS</h3>
+                <p class="noticia-resumo">Em parceria com o H4B, a Azzuro lança uma nova coleção de camisas produzidas a partir de resíduos retirados de praias e mares. A iniciativa transforma lixo em material esportivo e reforça o papel do esporte na luta pela preservação ambiental.</p>
+            </div>
+        </article>
+
+        <div class="galeria-camisas" style="display: flex; gap: 10px; margin-top: 10px;">
+    <img src="/midia/H4B x AZZURO camisa.png" style="width: 80px; border: 1px solid #ddd; border-radius: 4px;">
+        </div> 
+
+        <hr class="divisor">
+
+       <article class="noticia-item">
+    <div class="noticia-img">
+        <img src="/midia/camisas.png" alt="Nova Coleção H4B 2026">
+    </div>
+    <div class="noticia-info">
+        <span class="categoria">MARKETING - 15/03/2026 15:45h</span>
+        <h3 class="noticia-titulo">MANTOS REVELADoS: H4B F.C. E ICONE APRESENTAM OS NOVOS UNIFORMES PARA 2026</h3>
+        <p class="noticia-resumo">Com designs que vão do Rosa Vibrante ao 'Blackout' elegante, a nova coleção une a tecnologia de alta performance da Icone com a identidade visual única do H4B. Destaque para o terceiro uniforme em tom Vinho Imperial.</p>
+    </div>
+</article>
+
+<div class="galeria-camisas" style="display: flex; gap: 10px; margin-top: 10px;">
+    <img src="/midia/camisa nova 1.png" style="width: 80px; border: 1px solid #ddd; border-radius: 4px;">
+    <img src="/midia/camisa nova 2.png" style="width: 80px; border: 1px solid #ddd; border-radius: 4px;">
+    <img src="/midia/camisa nova 3.png" style="width: 80px; border: 1px solid #ddd; border-radius: 4px;">
+</div>
+
+    <hr class="divisor">
+
+        <article class="noticia-item">
+            <div class="noticia-img">
+                <img src="/midia/h4fla.png" alt="Vitória">
+            </div>
+            <div class="noticia-info">
+                <span class="categoria">FUTEBOL - 14/03/2026 22:10h</span>
+                <h3 class="noticia-titulo">COM AUTORIDADE, H4B VENCE CLÁSSICO E SOBE NA TABELA</h3>
+                <p class="noticia-resumo">Com gols de Abdallah Habib e Giorgian de Arrascaeta, o time garantiu os três pontos e a festa da torcida Rosanera.</p>
+            </div>
+        </article>
+
+        <hr class="divisor">
+
+        <article class="noticia-item">
+            <div class="noticia-img">
+                <img src="/midia/maracana.webp" alt="Vitória">
+            </div>
+            <div class="noticia-info">
+                <span class="categoria">FUTEBOL - 14/03/2026 9:00h</span>
+                <h3 class="noticia-titulo">H4B F.C. CHEGA AO RIO DE JANEIRO PARA CONFRONTO DECISIVO NO MARACANÃ</h3>
+                <p class="noticia-resumo">A delegação Rosanera desembarcou nesta tarde visando a partida contra o Flamengo. O técnico confirmou que a equipe terá força máxima para manter a invencibilidade no Brasileirão.</p>
+            </div>
+        </article>
+
+        <hr class="divisor">
+
+        <article class="noticia-item">
+            <div class="noticia-img">
+                <img src="/midia/entrevista.png" alt="Vitória">
+            </div>
+            <div class="noticia-info">
+                <span class="categoria">ENTREVISTA - 13/03/2026 10:45h</span>
+                <h3 class="noticia-titulo">ARRASCAETA PROJETA DUELO CONTRA EX-CLUBE E EXALTA TORCIDA DO H4B</h3>
+                <p class="noticia-resumo">Em entrevista, o camisa 90 destacou a importância de somar pontos fora de casa: "Respeitamos o adversário, mas o DNA do H4B é buscar a vitória em qualquer estádio".</p>
+            </div>
+        </article>
+
+        <hr class="divisor">
+
+        <article class="noticia-item">
+    <div class="noticia-img">
+        <img src="/midia/renovacao.png" alt="Kazu Miura">
+    </div>
+    <div class="noticia-info">
+        <span class="categoria">RECORDE - 12/03/2026 14:00h</span>
+        <h3 class="noticia-titulo">ETERNO: ABDALLAH HABIB RENOVA CONTRATO E SEGUE QUEBRANDO RECORDES NO H4B</h3>
+        <p class="noticia-resumo">O "King Habib" assinou a extensão de vínculo por mais uma temporada. Aos 35 anos, o atacante Árabe segue sendo peça fundamental no campo e exemplo de profissionalismo para os jovens da base.</p>
+    </div>
+</article>
+
+    </div>
+
+</section>
+<div id="image-modal" class="modal-zoom">
+    <span class="fechar-modal">&times;</span>
+    
+    <img class="modal-conteudo" id="img-ampliada">
+    
+    <div id="legenda-modal"></div>
+</div>
+
+<script src="noticias.js"></script>
+<script src="../login/sessao.js"></script>
+
+<footer>
+    <p>&copy; 2024 H4B FC. Todos os direitos reservados.</p>
+</footer>
+
+</body>
+</html>

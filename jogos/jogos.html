@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>H4B</title>
+
+    <link rel="stylesheet" href="jogos.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo-wrapper">
+        <a href="/home.html">
+          <img src="/midia/logo.png" alt="Logo" class="logo-img" />
+        </a>
+        <div class="logo-text">
+          <strong>H4B</strong
+          ><span style="color: var(--rosa)">FootBall Club</span>
+        </div>
+      </div>
+
+      <nav class="nav-links">
+        <a href="/noticias/noticias.html">Notícias</a>
+        <a href="jogos.html">Jogos</a>
+        <a href="/elenco/elenco.html">Elenco</a>
+        <a href="/estadio/estadio.html">Estádio</a>
+        <a href="/asnobet/asnobet.html">Asnos Bet</a>
+      </nav>
+
+      <a href="/login/login.html" class="btn-login">LOGIN</a>
+      <button onclick="deslogar()" class="btn-sair">SAIR</button>
+    </header>
+
+   <div class="calendario-titulo">
+  <h2>Calendário de Jogos</h2>
+  </div>
+
+    <div class="grid-info" id="jogos">
+      <div class="card">Jogo 1</div>
+      <div class="card">Jogo 2</div>
+      <div class="card">Jogo 3</div>
+      <div class="card">Jogo 4</div>
+      <div class="card">Jogo 5</div>
+    </div>
+
+    <footer>
+      <p>&copy; 2024 H4B FC. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="../config.js"></script>
+    <script src="jogos.js"></script>
+    <script src="../login/sessao.js"></script>
+  </body>
+</html>

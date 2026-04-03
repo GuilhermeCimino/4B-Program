@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cadastro - H4B F.C.</title>
+    <link rel="stylesheet" href="styleCadastro.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="logo-wrapper">
+        <a href="/home.html">
+          <img src="/midia/logo.png" alt="Logo" class="logo-img" />
+        </a>
+        <div class="logo-text">
+          <strong>H4B</strong
+          ><span style="color: var(--rosa)">FootBall Club</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="login-container">
+      <!-- Setinha de voltar -->
+      <a href="login.html" class="back-arrow">&#8592;</a>
+
+      <h1>Criar Conta</h1>
+      <p>Cadastre-se</p>
+
+      <form id="form-cadastro">
+        <label>Nome Completo</label>
+        <input
+          type="text"
+          id="nome-cadastro"
+          placeholder="Digite seu nome"
+          required
+        />
+
+        <label>Email</label>
+        <input
+          type="email"
+          id="email-cadastro"
+          placeholder="Digite seu email"
+          required
+        />
+
+        <label>Senha</label>
+        <input
+          type="password"
+          id="senha-cadastro"
+          placeholder="Crie uma senha"
+          required
+        />
+
+        <label>Confirmar Senha</label>
+        <input
+          type="password"
+          id="confirma-senha-cadastro"
+          placeholder="Confirme sua senha"
+          required
+        />
+
+        <button type="submit" class="login-btn">Cadastrar</button>
+      </form>
+    </div>
+
+    <footer>2024 H4B FC. Todos os direitos reservados.</footer>
+    <script src="config.js"></script>
+    <script src="cadastro.js"></script>
+  </body>
+</html>

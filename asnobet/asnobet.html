@@ -1,0 +1,303 @@
+ <!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>H4B - Asnos Bet</title>
+
+    <link rel="stylesheet" href="asnosbet.css">
+
+</head>
+
+<body>
+
+
+<header>
+
+    <div class="logo-wrapper">
+
+        <a href="/home.html">
+
+            <img src="/midia/logo.png" alt="Logo" class="logo-img">
+
+        </a>
+
+        <div class="logo-text">
+
+            <strong>H4B</strong><span style="color:var(--rosa)">FootBall Club</span>
+
+        </div>
+
+    </div>
+
+    
+
+    <nav class="nav-links">
+
+        <a href="/noticias/noticias.html">Notícias</a>
+
+        <a href="/jogos/jogos.html">Jogos</a>
+
+        <a href="/elenco/elenco.html">Elenco</a>
+
+        <a href="/estadio/estadio.html">Estádio</a>
+
+        <a href="/asnobet/asnobet.html">Asnos Bet</a>
+
+    </nav>
+
+
+    <a href="/login/login.html" class="btn-login">LOGIN</a>
+    <button onclick="deslogar()" class="btn-sair">SAIR</button>
+</header>
+
+
+<main>
+
+    <div class="banco-central" style="text-align: center; margin: 40px 0;">
+
+        <p style="font-size: 0.8rem; color: #888; letter-spacing: 2px;">SALDO TOTAL DISPONÍVEL</p>
+
+        <h2 id="display-saldo" style="font-size: 3.5rem; color: var(--rosa); text-shadow: 0 0 15px rgba(255,102,178,0.7); font-weight: 900;">R$ 100,00</h2>
+
+    </div>
+
+
+    <div class="painel-apostas" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; padding: 0 20px;">
+
+
+        <section id="slots-game" class="card-aposta">
+
+            <h3>ROSANERA SLOTS</h3>
+
+            <div class="bet-input-container">
+
+                <label for="valor-aposta">VALOR DA APOSTA (R$):</label>
+
+                <input type="number" id="valor-aposta" value="5" min="1">
+
+            </div>
+
+            <div class="slots-container">
+
+                <div class="reel" id="reel1">⚽</div>
+
+                <div class="reel" id="reel2">⚽</div>
+
+                <div class="reel" id="reel3">⚽</div>
+
+            </div>
+
+            <button onclick="girarSlots()" class="btn-cta" id="btn-girar">GIRAR ROCHETA</button>
+
+            <p id="slots-feedback" class="feedback"></p>
+
+        </section>
+
+
+        <section id="crash-game" class="card-aposta">
+
+            <h3>PINK CRASH</h3>
+
+            <p style="font-size: 0.8rem; color: #555;">Multiplicador:</p>
+
+            <div class="crash-display">
+
+                <div id="crash-multiplier">1.00x</div>
+
+            </div>
+
+            <div class="bet-input-container">
+
+                <label for="valor-aposta-crash">VALOR DA APOSTA (R$):</label>
+
+                <input type="number" id="valor-aposta-crash" value="10" min="1">
+
+            </div>
+
+            <div class="controles-crash">
+
+                <button onclick="iniciarCrash()" class="btn-cta" id="btn-iniciar-crash">DECOLAR</button>
+
+                <button onclick="sacarCrash()" class="btn-cta btn-sacar" id="btn-sacar-crash" style="display:none; background: #44ff44; color: #000;">SACAR AGORA</button>
+
+            </div>
+
+            <p id="crash-feedback" class="feedback"></p>
+
+        </section>
+
+
+        <section id="horse-game" class="card-aposta">
+
+            <h3>H4B RUN</h3>
+
+            <div class="pista-corrida" style="background: #050505; border: 1px solid #222; border-radius: 10px; padding: 10px; margin-bottom: 20px; position: relative; overflow: hidden; width: 100%;">
+
+                <div class="cavalo" id="horse1" style="font-size: 2rem; margin: 5px 0; transition: transform 0.1s linear;">🐎<span style="font-size: 0.6rem; color: var(--preto);">1</span></div>
+
+                <div class="cavalo" id="horse2" style="font-size: 2rem; margin: 5px 0; transition: transform 0.1s linear;">🐎<span style="font-size: 0.6rem; color: var(--preto);">2</span></div>
+
+                <div class="cavalo" id="horse3" style="font-size: 2rem; margin: 5px 0; transition: transform 0.1s linear;">🐎<span style="font-size: 0.6rem; color: var(--preto);">3</span></div>
+
+                <div class="linha-chegada" style="position: absolute; right: 5px; top: 0; bottom: 0; width: 2px; background: repeating-linear-gradient(0deg, #fff, #fff 5px, #000 5px, #000 10px);"></div>
+
+            </div>
+
+            <div class="bet-input-container">
+
+                <label>CAVALO (1, 2 ou 3):</label>
+
+                <input type="number" id="cavalo-escolhido" min="1" max="3" value="1">
+
+                <label>VALOR (R$):</label>
+
+                <input type="number" id="valor-aposta-horse" value="10" min="1">
+
+            </div>
+
+            <button onclick="iniciarCorrida()" class="btn-cta" id="btn-correr">LARGADA!</button>
+
+            <p id="horse-feedback" class="feedback"></p>
+
+        </section>
+
+    </div>
+
+
+    <div id="pawn-shop" style="display: none; max-width: 800px; margin: 50px auto; padding: 30px; border: 2px solid #ff4444; border-radius: 15px; background: #0a0a0a; text-align: center;">
+
+        <h4 style="color: #ff4444; margin-bottom: 10px; text-transform: uppercase;"> O DINHEIRO ACABOU! </h4>
+
+        <p style="color: #aaa; margin-bottom: 20px;">Você não tem mais saldo. Venda seus pertences para continuar jogando:</p>
+
+        <div class="items-to-sell" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px;">
+
+            <button onclick="venderBem('Carro', 50, this)" class="btn-pawn">Vender Carro (R$ 50)</button>
+
+            <button onclick="venderBem('Casa', 200, this)" class="btn-pawn">Vender Casa (R$ 200)</button>
+
+            <button onclick="venderBem('Cachorro', 20, this)" class="btn-pawn">Vender Cachorro (R$ 20)</button>
+
+            <button onclick="venderBem('Filho', 500, this)" class="btn-pawn">Vender Filho (R$ 500)</button>
+
+        </div>
+
+        <p id="pawn-feedback" style="margin-top: 15px; color: #ff4444; font-weight: bold;"></p>
+
+    </div>
+
+
+    <section class="card-aposta card-inferior" style="text-align:center;">
+
+    <p style="color:#777; margin-bottom:20px; margin-top: 30px;">
+
+        Aposte em jogos reais do Brasileirão
+
+    </p>
+
+    <button id="btnApostar" class="btn-cta">
+
+        Apostar nos jogos
+
+    </button>
+
+</section>
+
+
+<!-- TELA DE FUTEBOL -->
+
+<section id="secao-futebol" style="display:none;">
+    <h2 style="text-align:center; margin-top: 30px; margin-bottom: 10px;">Jogos disponíveis</h2>
+    <p style="text-align:center; color:#777; font-size:0.85rem; margin-bottom: 20px;">Arraste para ver mais jogos →</p>
+
+    <div id="jogos" class="grid-info"></div>
+
+    <div style="text-align:center; margin-top:20px;">
+        <button onclick="resolverApostas()" class="btn-cta" style="margin-right:10px;">Resolver Apostas</button>
+        <button onclick="voltarApostas()" class="btn-cta">Voltar</button>
+    </div>
+</section>
+
+
+
+<div id="telaJogos" style="display: none;">
+
+    <h1>Escolha seu jogo</h1>
+
+    <div id="jogos"></div>
+
+    <button id="voltar">Voltar</button>
+
+</div>
+
+
+    <div class="aviso-conscientizacao" style="text-align: center; margin: 40px auto; max-width: 800px;">
+
+        <p style="background: rgba(255, 68, 68, 0.1); border: 1px solid #ff4444; color: #ffcccc; padding: 15px; border-radius: 10px;">
+
+            ⚠️ Este é um simulador educacional. Em apostas reais, a perda é programada e o vício destrói vidas.
+
+        </p>
+
+
+</main>
+
+
+<!-- Modal de Aposta -->
+
+<div id="modal-aposta" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 1000; justify-content: center; align-items: center;">
+
+    <div style="background: var(--bg-card); padding: 40px; border-radius: 15px; border: 1px solid var(--rosa); text-align: center; max-width: 400px; width: 90%;">
+
+        <h3 style="color: var(--rosa); margin-bottom: 20px;">Escolha o Resultado</h3>
+
+        <div style="display: flex; justify-content: space-around; margin-bottom: 20px;">
+
+            <button id="opcao-casa" class="opcao-btn" onclick="selecionarOpcao('casa')">Casa</button>
+
+            <button id="opcao-empate" class="opcao-btn" onclick="selecionarOpcao('empate')">Empate</button>
+
+            <button id="opcao-fora" class="opcao-btn" onclick="selecionarOpcao('fora')">Fora</button>
+
+        </div>
+
+        <div style="margin-bottom: 20px;">
+
+            <label for="valor-aposta-modal" style="color: white;">Valor da Aposta (R$):</label>
+
+            <input type="number" id="valor-aposta-modal" min="1" style="width: 100%; padding: 10px; margin-top: 5px; border: 1px solid var(--rosa); border-radius: 5px; background: #000; color: white;">
+
+        </div>
+
+        <div>
+
+            <button onclick="finalizarAposta()" class="btn-cta" style="margin-right: 10px;">Finalizar</button>
+
+            <button onclick="fecharModal()" class="btn-cta" style="background: #666; margin-right: 10px; margin-bottom: 20px; margin-top: 20px;" >Cancelar</button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<footer>
+
+    <p>&copy; 2024 H4B FC. Todos os direitos reservados.</p>
+
+</footer>
+
+<script src="../login/sessao.js"></script>
+<script src="asnobet.js"></script>
+
+
+</body>
+
+</html> 

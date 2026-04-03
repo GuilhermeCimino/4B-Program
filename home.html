@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>H4B</title>
+    
+    <link rel="stylesheet" href="home.css">
+    
+</head>
+<body>
+
+<header>
+    <div class="logo-wrapper">
+        <a href="home.html">
+            <img src="/midia/logo.png" alt="Logo" class="logo-img">
+        </a>
+        <div class="logo-text">
+            <strong>H4B</strong><span style="color:var(--rosa)">FootBall Club</span>
+        </div>
+    </div>
+    
+    <nav class="nav-links">
+        <a href="noticias/noticias.html">Notícias</a>
+        <a href="jogos/jogos.html">Jogos</a>
+        <a href="elenco/elenco.html">Elenco</a>
+        <a href="estadio/estadio.html">Estádio</a>
+        <a href="asnobet/asnobet.html">Asnos Bet</a>
+    </nav>
+
+    <a href="login/login.html" class="btn-login">LOGIN</a>
+    <button onclick="deslogar()" class="btn-sair">SAIR</button>
+</header>
+
+<section class="hero">
+    <h1>A Força <span>Rosanera</span></h1>
+    <p>Onde a tradição encontra o futebol.</p>
+    <a href="ingressos/ingressos.html" class="btn-cta">COMPRAR INGRESSOS</a>
+</section>
+
+<section class="info">
+
+  <div class="card-info destaque">
+    <p class="mini">PRÓXIMO JOGO</p>
+    <h2>H4B x Palmeiras</h2>
+    <p>Domingo • 16:00 • Arena H4B</p>
+
+    <a href="jogos/jogos.html">
+    <button>Ver calendário</button>
+    </a>
+
+  </div>
+
+  <div class="card-info stats">
+    <p class="mini">CLASSIFICAÇÃO</p>
+
+    <p data-pos="1">H4B <span>30 pts</span></p>
+    <p data-pos="2">Palmeiras <span>27 pts</span></p>
+    <p data-pos="3">Flamengo <span>25 pts</span></p>
+    <p data-pos="4">Grêmio <span>22 pts</span></p>
+    <p data-pos="5">Fluminense <span>20 pts</span></p>
+
+  </div>
+
+</section>
+
+<section id="elenco">
+    <h2 style="padding-left: 5%;">NOSSO ELENCO TITULAR</h2>
+    <div class="elenco-grid">
+        <div class="player-card"><img src="/midia/jogadores/1.jpeg" alt="Foto"><h4>Goleiro - Marcos</h4></div>
+        <div class="player-card"><img src="/midia/jogadores/93.jpeg" alt="Foto"><h4>Zagueiro - Sergio Ramos</h4></div>
+        <div class="player-card"><img src="/midia/jogadores/66.jpeg" alt="Foto"><h4>Zagueiro - Natan Correa</h4></div>
+        <div class="player-card"><img src="/midia/jogadores/13.jpeg" alt="Foto"><h4>Lateral Esquerdo - Miguel Luizatto</h4></div>
+        <div class="player-card"><img src="/midia/jogadores/32.jpeg" alt="Foto"><h4>Lateral Direito - Caio Goiaba</h4></div>
+        <div class="player-card"><img src="/midia/jogadores/69 - 2.jpeg" alt="Foto"><h4>Volante - Diego</h4></div>
+        <div class="player-card"><img src="/midia/jogadores/8.jpeg" alt="Foto"><h4>Volante - Andreas Pereira</h4></div>
+        <div class="player-card"><img src="/midia/jogadores/10.jpeg" alt="Foto"><h4>Meia - Guilherme Cimino</h4></div>
+        <div class="player-card"><img src="/midia/jogadores/7.jpeg" alt="Foto"><h4>Ponta Esquerda - Cristiano Ronaldo</h4></div>
+        <div class="player-card"><img src="/midia/jogadores/11.jpeg" alt="Foto"><h4>Ponta Direita - Abdallah Habib</h4></div>
+        <div class="player-card"><img src="/midia/jogadores/9.jpeg" alt="Foto"><h4>Centroavante - Robert Lewandowski</h4></div>
+    </div>
+</section>
+
+<section class="estadio" id="estadio">
+    <h2>ÁREA DO ESTÁDIO</h2>
+    <p>Capacidade: 45.000 pessoas | Portões abrem 2h antes.</p>
+    <div class="estadio-container" style="width: 100%; height: 300px; background: #1a1a1a; margin: 20px 0; border: 1px dashed var(--rosa); display: flex; align-items: center; justify-content: center; overflow: hidden;">
+        <img src="/midia/estadio.png" alt="Mapa" style="width: 100%; height: 100%; object-fit: cover;">
+    </div>
+    <a href="estadio/estadio.html" class="btn-cta" style="background: white; color: black;">Saiba Mais!</a>
+</section>
+
+<footer>
+    <p>&copy; 2024 H4B FC. Todos os direitos reservados.</p>
+</footer>
+
+<div id="intro-container">
+    <video id="video-intro" autoplay muted playsinline>
+        <source src="midia/intro.mp4" type="video/mp4">
+    </video>
+</div>
+
+<script src="home.js"></script>
+<script src="../login/sessao.js"></script>
+</body>
+</html>
