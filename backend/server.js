@@ -25,6 +25,7 @@ const betsRoute = require("./routes/bets");
 const authRoutes = require("./routes/auth");
 app.use("/api/bets", betsRoute);
 app.use("/api/auth", authRoutes);
+app.use("/api/fixtures", fixturesRoute);
 
 app.get("/status", (req, res) => {
   res.send("<h1>O Servidor está Rodando</h1>");

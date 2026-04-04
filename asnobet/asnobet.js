@@ -398,7 +398,7 @@ function iniciarCorrida() {
     });
 
   function apostar(fixtureId) {
-    fetch("http://localhost:3000/bets", {
+    fetch("http://localhost:3000/api/bets", {
       method: "POST",
 
       headers: {
