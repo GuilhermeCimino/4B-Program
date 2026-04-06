@@ -2,71 +2,68 @@
 
 :root {
   --rosa: #ff66b2;
-
   --preto: #000000;
-
   --cinza-escuro: #0a0a0a;
-
   --bg-card: #151515;
-
   --branco: #ffffff;
 }
 
 * {
   margin: 0;
-
   padding: 0;
-
   box-sizing: border-box;
-
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
   background: var(--preto);
-
   color: var(--branco);
-
   overflow-x: hidden;
 }
 
 /* --- HEADER --- */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 5%;
-    background: #000;
-    border-bottom: 2px solid var(--rosa);
-    position: sticky;
-    top: 0;
-    z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 5%;
+  background: #000;
+  border-bottom: 2px solid var(--rosa);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .logo-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
-.logo-img { height: 45px; }
-.logo-text { font-size: 1.1rem; font-weight: bold; }
+.logo-img {
+  height: 45px;
+}
+.logo-text {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
 
 .nav-links {
-    display: flex;
-    gap: 30px;
+  display: flex;
+  gap: 30px;
 }
 
 .nav-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    transition: .3s;
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  transition: 0.3s;
 }
 
-.nav-links a:hover { color: var(--rosa); }
-
+.nav-links a:hover {
+  color: var(--rosa);
+}
 
 .btn-sair {
   background-color: #ff4444; /* Vermelho para o botão de sair */
@@ -87,52 +84,41 @@ header {
   background-color: #cc3333; /* Efeito de hover */
 }
 
-
-
 .btn-login {
-    border: 1px solid var(--rosa);
-    color: var(--rosa);
-    padding: 7px 22px;
-    text-decoration: none;
-    border-radius: 4px;
-    font-size: 0.8rem;
-    font-weight: bold;
-    transition: .3s;
+  border: 1px solid var(--rosa);
+  color: var(--rosa);
+  padding: 7px 22px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
 .btn-login:hover {
-    background: var(--rosa);
-    color: white;
+  background: var(--rosa);
+  color: white;
 }
-
 
 /* --- BANCO CENTRAL (SALDO NO TOPO) --- */
 
 .banco-central {
   text-align: center;
-
   padding: 50px 0 20px 0;
 }
 
 .banco-central p {
   font-size: 0.75rem;
-
   color: #888;
-
   letter-spacing: 3px;
-
   text-transform: uppercase;
-
   margin-bottom: 10px;
 }
 
 #display-saldo {
   font-size: 3.5rem;
-
   color: var(--rosa);
-
   text-shadow: 0 0 20px rgba(255, 102, 178, 0.7);
-
   font-weight: 900;
 }
 
@@ -140,19 +126,12 @@ header {
 
 .painel-apostas {
   display: flex;
-
   justify-content: center;
-
   align-items: stretch;
-
   gap: 30px;
-
   padding: 20px 5%;
-
   max-width: 1300px;
-
   margin: 0 auto;
-
   flex-wrap: wrap;
 }
 
@@ -162,41 +141,25 @@ header {
 
 .card-aposta {
   flex: 1;
-
   min-width: 400px;
-
   max-width: 550px;
-
   background: rgba(26, 26, 26, 0.7);
-
   backdrop-filter: blur(10px);
-
   padding: 40px;
-
   border-radius: 25px;
-
   border: 1px solid rgba(255, 102, 178, 0.15);
-
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
-
   display: flex;
-
   flex-direction: column;
-
   align-items: center;
-
   text-align: center;
-
   margin: 0 auto; /* Centralizar o card */
 }
 
 .card-aposta h3 {
   font-size: 1.2rem;
-
   letter-spacing: 2px;
-
   margin-bottom: 25px;
-
   color: #fff;
 }
 
@@ -204,45 +167,29 @@ header {
 
 .bet-input-container {
   display: flex;
-
   flex-direction: column;
-
   align-items: center;
-
   margin-bottom: 25px;
 }
 
 .bet-input-container label {
   font-size: 0.65rem;
-
   color: #666;
-
   margin-bottom: 8px;
-
   font-weight: bold;
 }
 
 .bet-input-container input {
   background: #000;
-
   border: 2px solid var(--rosa);
-
   color: white;
-
   padding: 12px;
-
   border-radius: 10px;
-
   text-align: center;
-
   font-size: 1.3rem;
-
   width: 140px;
-
   outline: none;
-
   font-weight: bold;
-
   transition: 0.3s;
 }
 
@@ -254,35 +201,22 @@ header {
 
 .slots-container {
   display: flex;
-
   justify-content: center;
-
   gap: 15px;
-
   margin-bottom: 30px;
-
   width: 100%;
 }
 
 .reel {
   width: 95px;
-
   height: 120px;
-
   background: #000;
-
   border: 2px solid var(--rosa);
-
   border-radius: 15px;
-
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
   font-size: 3.8rem;
-
   box-shadow:
     0 0 15px rgba(255, 102, 178, 0.2),
     inset 0 0 10px rgba(255, 102, 178, 0.1);
@@ -290,7 +224,6 @@ header {
 
 .reel.girando {
   animation: spinEffect 0.15s infinite linear;
-
   filter: blur(2px);
 }
 
@@ -298,43 +231,28 @@ header {
 
 .crash-display {
   width: 100%;
-
   height: 180px;
-
   background: #050505;
-
   border: 2px solid #222;
-
   border-radius: 20px;
-
   margin-bottom: 25px;
-
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
   position: relative;
-
   overflow: hidden;
 }
 
 #crash-multiplier {
   font-size: 4rem;
-
   font-weight: bold;
-
   color: var(--rosa);
-
   text-shadow: 0 0 20px rgba(255, 102, 178, 0.5);
 }
 
 #crash-multiplier.exploded {
   color: #ff4444;
-
   text-shadow: 0 0 20px #ff4444;
-
   animation: shake 0.2s infinite;
 }
 
@@ -342,61 +260,41 @@ header {
 
 .btn-cta {
   background: var(--rosa);
-
   color: white;
-
   padding: 16px 45px;
-
   font-weight: bold;
-
   border-radius: 10px;
-
   border: none;
-
   cursor: pointer;
-
   text-transform: uppercase;
-
   transition: 0.3s;
-
   font-size: 0.95rem;
-
   box-shadow: 0 5px 15px rgba(255, 102, 178, 0.3);
 }
 
 .btn-cta:hover:not(:disabled) {
   filter: brightness(1.2);
-
   transform: translateY(-2px);
-
   box-shadow: 0 8px 20px rgba(255, 102, 178, 0.5);
 }
 
 .btn-cta:disabled {
   background: #333;
-
   color: #666;
-
   cursor: not-allowed;
-
   box-shadow: none;
 }
 
 .btn-sacar {
   background: #44ff44 !important;
-
   color: #000 !important;
-
   box-shadow: 0 5px 15px rgba(68, 255, 68, 0.3);
 }
 
 .feedback {
   margin-top: 20px;
-
   font-weight: bold;
-
   font-size: 0.9rem;
-
   min-height: 1.5rem;
 }
 
@@ -404,83 +302,56 @@ header {
 
 .secao-penhor {
   max-width: 1000px;
-
   margin: 60px auto;
-
   padding: 40px;
-
   background: var(--cinza-escuro);
-
   border: 2px solid #ff4444;
-
   border-radius: 20px;
-
   text-align: center;
-
   box-shadow: 0 0 30px rgba(255, 68, 68, 0.15);
 }
 
 .secao-penhor h4 {
   color: #ff4444;
-
   text-transform: uppercase;
-
   letter-spacing: 3px;
-
   margin-bottom: 10px;
 }
 
 .secao-penhor p {
   color: #888;
-
   font-size: 0.9rem;
-
   margin-bottom: 30px;
 }
 
 .items-to-sell {
   display: grid;
-
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-
   gap: 15px;
 }
 
 .btn-pawn {
   background: #111;
-
   border: 1px solid #333;
-
   color: #888;
-
   padding: 15px;
-
   border-radius: 10px;
-
   cursor: pointer;
-
   transition: 0.3s;
-
   font-weight: bold;
 }
 
 .btn-pawn:hover {
   border-color: #ff4444;
-
   color: white;
-
   background: rgba(255, 68, 68, 0.1);
 }
 
 .btn-pawn.sold {
   background: #050505;
-
   color: #333;
-
   border-color: #111;
-
   text-decoration: line-through;
-
   pointer-events: none;
 }
 
@@ -488,31 +359,20 @@ header {
 
 .aviso-conscientizacao {
   max-width: 800px;
-
   margin: 40px auto;
-
   color: #ffcccc;
-
   padding: 20px;
-
   border-radius: 12px;
-
   text-align: center;
-
   font-size: 0.8rem;
-
   line-height: 1.6;
 }
 
 footer {
   padding: 40px;
-
   text-align: center;
-
   border-top: 1px solid #222;
-
   font-size: 0.8rem;
-
   color: #555;
 }
 
@@ -547,13 +407,11 @@ footer {
 @media (max-width: 850px) {
   .painel-apostas {
     flex-direction: column;
-
     align-items: center;
   }
 
   .card-aposta {
     width: 100%;
-
     min-width: unset;
   }
 }
@@ -562,16 +420,12 @@ footer {
 
 .painel-apostas {
   display: grid;
-
   grid-template-columns: repeat(
     auto-fit,
     minmax(350px, 1fr)
   ); /* 3 colunas se houver espaço */
-
   gap: 20px;
-
   padding: 20px 2%;
-
   max-width: 1400px;
 }
 
@@ -579,119 +433,57 @@ footer {
 
 .pista-corrida {
   width: 100%;
-
   background: #050505;
-
   border: 1px solid #222;
-
   border-radius: 10px;
-
   padding: 15px 5px;
-
   margin-bottom: 20px;
-
   position: relative;
-
   overflow: hidden;
 }
 
 .cavalo {
   font-size: 2rem;
-
   margin: 10px 0;
-
   transition: transform 0.1s linear; /* Movimento fluido */
-
   display: flex;
-
   align-items: center;
-
   position: relative;
-
   left: 0;
 }
 
 .cavalo span {
   font-size: 0.7rem;
-
   background: var(--rosa);
-
   color: #000;
-
   padding: 2px 5px;
-
   border-radius: 3px;
-
   margin-right: 5px;
-
   font-weight: bold;
 }
 
 .linha-chegada {
   position: absolute;
-
   right: 10px;
-
   top: 0;
-
   bottom: 0;
-
   width: 4px;
-
   background: repeating-linear-gradient(
     0deg,
     #fff,
     #fff 10px,
-
     #000 10px,
-
     #000 20px
   );
 }
-/* 
-#jogos {
-  display: flex;
 
-  flex-wrap: wrap;
-
-  gap: 20px;
-
-  justify-content: center;
-
-  padding: 20px;
-}
-
-#jogos .card {
-  background: var(--bg-card);
-
-  padding: 20px;
-
-  border-radius: 15px;
-
-  border: 1px solid rgba(255, 102, 178, 0.2);
-
-  text-align: center;
-
-  flex: 1;
-
-  min-width: 300px;
-
-  max-width: 400px;
-}
-*/
 #jogos button {
   margin: 5px;
-
   padding: 8px 12px;
-
   border-radius: 8px;
-
   border: none;
-
   background: var(--rosa);
-
   color: white;
-
   cursor: pointer;
 }
 
