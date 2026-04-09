@@ -3,16 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <title>Ingressos - H4B</title>
-  <link rel="stylesheet" href="/elenco/elenco.css">
+
+  <link rel="stylesheet" href="../elenco/elenco.css">
   <link rel="stylesheet" href="ingressos.css">
 </head>
+
 <body>
 
 <header>
     <div class="logo-wrapper">
-<a href="/home.html">
-    <img src="/midia/logo.png" alt="Logo" class="logo-img">
-</a>
+        <a href="/home.html">
+            <img src="/midia/logo.png" alt="Logo" class="logo-img">
+        </a>
         <div class="logo-text">
             <strong>H4B</strong><span style="color:var(--rosa)">FootBall Club</span>
         </div>
@@ -48,7 +50,7 @@
       <p>Allianz Parque</p>
       <p>Sábado - 21:00</p>
       <span>R$ 120</span>
-      <button class="btn-comprar">Comprar</button>
+      <button onclick="comprar('H4B vs Palmeiras','120')" class="btn-comprar">Comprar</button>
     </div>
 
     <div class="ingresso-card">
@@ -56,7 +58,7 @@
       <p>Morumbi</p>
       <p>Domingo - 18:00</p>
       <span>R$ 150</span>
-      <button class="btn-comprar">Comprar</button>
+      <button onclick="comprar('H4B vs Flamengo', '150')" class="btn-comprar">Comprar</button>
     </div>
 
     <div class="ingresso-card">
@@ -64,20 +66,21 @@
       <p>Vila Belmiro</p>
       <p>Quarta - 20:00</p>
       <span>R$ 90</span>
-      <button class="btn-comprar">Comprar</button>
+      <button onclick="comprar('H4B vs Santos', '90')" class="btn-comprar">Comprar</button>
     </div>
 
   </div>
 </section>
 
-
 <footer>
     <p>&copy; 2024 H4B FC. Todos os direitos reservados.</p>
 </footer>
 
-
+<!-- JS DA PÁGINA -->
 <script src="ingressos.js"></script>
-<script src="../login/sessao.js"></script>
+
+<!-- JS DE SESSÃO -->
+<script src="/login/sessao.js"></script>
 
 </body>
 </html>
