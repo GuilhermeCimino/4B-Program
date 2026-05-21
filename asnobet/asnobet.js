@@ -7,8 +7,14 @@ const icones = ["⚽", "🏆", "💎", "⭐", "🎰", "👕"];
 
 // Carrega o saldo do usuário ao iniciar a página
 function carregarSaldo() {
-  const usuarioSalvo = localStorage.getItem("usuario");
-  const userId = usuarioSalvo ? JSON.parse(usuarioSalvo).id : 1;
+  const usuarioSalvo = JSON.parse(localStorage.getItem("usuario")) || undefined;
+  if (usuarioSalvo === undefined) {
+    saldo = 0;
+    atualizarDisplaySaldo();
+    return;
+  }
+
+  const userId = usuarioSalvo.id;
 
   fetch(`http://localhost:3000/api/bets/saldo/${userId}`)
     .then((res) => res.json())
@@ -16,7 +22,9 @@ function carregarSaldo() {
       saldo = data.saldo;
       atualizarDisplaySaldo();
     })
-    .catch((err) => console.log("Erro ao carregar saldo:", err));
+    .catch((err) => {
+      console.log("Erro ao carregar saldo:", err);
+    });
 }
 
 window.onload = carregarSaldo;
@@ -29,8 +37,8 @@ function atualizarDisplaySaldo() {
 
 // Sincroniza o saldo atual com o backend
 function atualizarSaldoNoBanco(novoSaldo) {
-  const usuarioSalvo = localStorage.getItem("usuario");
-  const userId = usuarioSalvo ? JSON.parse(usuarioSalvo).id : 1;
+  const usuarioSalvo = JSON.parse(localStorage.getItem("usuario"));
+  const userId = usuarioSalvo.id;
 
   fetch("http://localhost:3000/api/bets/atualizar-saldo", {
     method: "POST",

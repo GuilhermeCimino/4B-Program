@@ -95,7 +95,6 @@ router.post("/login", (req, res) => {
             expiresIn: "1d",
           },
         );
-
         return res.json({
           mensagem: "Login bem-sucedido!",
           token,

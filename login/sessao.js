@@ -14,7 +14,7 @@ window.addEventListener("DOMContentLoaded", () => {
   const btnSair = document.querySelector(".btn-sair");
 
   // Mudamos de "usuario" para "nomeUsuario" que é o que seu sistema salva!
-  const usuarioLogado = localStorage.getItem("nomeUsuario");
+  const usuarioLogado = localStorage.getItem("usuario");
 
   if (usuarioLogado) {
     // Se achou o nome do usuário, ele está logado!

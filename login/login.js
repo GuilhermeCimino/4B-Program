@@ -24,8 +24,9 @@ formLogin.addEventListener("submit", (evento) => {
       if (resposta.mensagem === "Login bem-sucedido!") {
         // GUARDANDO O LOGIN:
         // Salvamos o token e o nome do usuário no navegador para usar depois
+        console.log(resposta);
         localStorage.setItem("token", resposta.token);
-        localStorage.setItem("nomeUsuario", resposta.usuario.nome);
+        localStorage.setItem("usuario", JSON.stringify(resposta.usuario));
 
         alert(`Bem-vindo de volta, ${resposta.usuario.nome}!`);
 
