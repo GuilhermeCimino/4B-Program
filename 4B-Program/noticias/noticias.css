@@ -1,0 +1,329 @@
+/* --- VARIÁVEIS --- */
+:root {
+    --rosa: #FF66B2;
+    --preto: #000000;
+    --cinza: #121212;
+    --bg-card: #151515;
+    --branco: #ffffff;
+    --fundo-noticias: #f5f5f5;
+    --texto-preto: #1a1a1a;
+}
+
+/* --- RESET --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: var(--preto);
+    color: var(--branco);
+    overflow-x: hidden;
+}
+
+/* --- HEADER (RESPONSIVO) --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 5%;
+    background: #000;
+    border-bottom: 2px solid var(--rosa);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-img { height: 45px; }
+.logo-text { font-size: 1.1rem; font-weight: bold; }
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    transition: .3s;
+}
+
+.nav-links a:hover { color: var(--rosa); }
+
+
+.btn-sair {
+  background-color: #ff4444; /* Vermelho para o botão de sair */
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px; /* Ajuste para ficar do mesmo tamanho do seu btn-login */
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 14px; /* Ajuste para combinar com o tamanho do texto do login */
+  text-transform: uppercase; /* Deixa em caixa alta igual ao seu LOGIN */
+  transition: background 0.2s;
+  margin-left: 0px; /* Dá um espacinho do botão de Login */
+}
+
+.btn-sair:hover {
+  background-color: #cc3333; /* Efeito de hover */
+}
+
+
+
+.btn-login {
+    border: 1px solid var(--rosa);
+    color: var(--rosa);
+    padding: 7px 22px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.btn-login:hover {
+    background: var(--rosa);
+    color: white;
+}
+
+/* --- CONTAINER DE NOTÍCIAS --- */
+.noticias-container {
+    background-color: var(--fundo-noticias);
+    color: var(--texto-preto);
+    padding: 60px 10%;
+    min-height: 80vh;
+}
+
+.titulo-secao {
+    font-size: 1.5rem;
+    border-bottom: 3px solid var(--rosa);
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 30px;
+    color: #000;
+}
+
+/* PAGINAÇÃO */
+.paginacao {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-bottom: 20px;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.paginacao span { cursor: pointer; padding: 2px 5px; }
+.paginacao .active {
+    color: var(--rosa);
+    font-weight: bold;
+}
+
+/* LISTA DE NOTÍCIAS */
+.noticia-item {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 20px;
+    padding: 10px 0;
+    transition: 0.3s;
+}
+
+.noticia-img img {
+    width: 350px; 
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border: 1px solid #eee;
+}
+
+.galeria-camisas {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.galeria-camisas img {
+    cursor: zoom-in;
+    transition: 0.3s;
+    width: 80px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.galeria-camisas img:hover {
+    transform: scale(1.05);
+    border-color: var(--rosa) !important;
+}
+
+.noticia-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.categoria {
+    color: #cc0000;
+    font-size: 0.75rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.noticia-titulo {
+    font-size: 1.4rem;
+    line-height: 1.2;
+    font-weight: 800;
+    margin-bottom: 10px;
+    color: var(--texto-preto);
+    text-transform: uppercase;
+}
+
+.noticia-resumo {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.divisor {
+    border: 0;
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+/* --- MODAL DE ZOOM --- */
+.modal-zoom {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.95);
+    backdrop-filter: blur(8px);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-conteudo {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 80vh;
+    width: auto;
+    height: auto;
+    border: 3px solid var(--rosa);
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(255, 102, 178, 0.5);
+    animation: zoom 0.3s ease-out;
+}
+
+#legenda-modal {
+    margin: 15px auto;
+    text-align: center;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.fechar-modal {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    color: #fff;
+    font-size: 45px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+/* --- ANIMAÇÕES --- */
+@keyframes zoom {
+    from {transform: scale(0.7); opacity: 0;}
+    to {transform: scale(1); opacity: 1;}
+}
+
+/* --- MOBILE QUERIES (ADAPTAÇÃO SEM MUDAR O VISUAL) --- */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 15px 2%;
+        height: auto;
+        gap: 15px;
+    }
+
+    .logo-wrapper {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .nav-links {
+        width: 100%;
+        overflow-x: auto;
+        padding: 5px 0;
+        justify-content: flex-start;
+        gap: 20px;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .nav-links a {
+        font-size: 0.8rem;
+        white-space: nowrap;
+    }
+
+    .btn-login {
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+    }
+
+    .noticias-container {
+        padding: 30px 5%;
+    }
+
+    .noticia-item {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .noticia-img img {
+        width: 100%;
+        height: auto;
+    }
+
+    .noticia-titulo {
+        font-size: 1.2rem;
+    }
+
+    .paginacao {
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .modal-conteudo {
+        max-width: 95%;
+    }
+}
+
+/* --- FOOTER --- */
+footer {
+    padding: 35px;
+    text-align: center;
+    border-top: 1px solid #333;
+    font-size: 14px;
+    color: #777;
+    background: #000;
+}

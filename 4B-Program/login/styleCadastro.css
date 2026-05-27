@@ -1,0 +1,186 @@
+:root {
+    --rosa: #FF66B2;
+    --preto: #000000;
+    --cinza: #121212;
+    --bg-card: #151515;
+    --branco: #ffffff;
+}
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+}
+ 
+  /* FUNDO DO SITE */
+ 
+  body{
+    background-color:#000;
+    color:white;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+  }
+ 
+  /* HEADER */
+ 
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 5%;
+    background: #000;
+    border-bottom: 2px solid var(--rosa);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-img { height: 45px; }
+.logo-text { font-size: 1.1rem; font-weight: bold; }
+ 
+  /* CONTAINER CENTRAL */
+ 
+  .login-container {
+    width: 380px;
+    margin: 80px auto; /* margem maior para espaçamento vertical */
+    background: #1c1c1c;
+    padding: 50px 40px; /* mais padding vertical e horizontal */
+    border-radius: 10px;
+    border-left: 5px solid #FF66B2;
+    text-align: center;
+  }
+ 
+  /* TEXTOS */
+ 
+  .login-container h1 {
+    margin-bottom: 15px; /* espaço abaixo do título */
+  }
+ 
+  .login-container p {
+    color: #bbb;
+    margin-bottom: 30px; /* espaço abaixo do subtítulo */
+  }
+ 
+  /* FORMULÁRIO */
+ 
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+ 
+  label {
+    text-align: left;
+    margin-top: 20px; /* espaço acima do label */
+    font-size: 14px;
+  }
+ 
+  input {
+    padding: 12px;
+    margin-top: 8px; /* espaço entre label e input */
+    border: none;
+    border-radius: 5px;
+    background: #2a2a2a;
+    color: white;
+    font-size: 14px;
+  }
+ 
+  input:focus {
+    outline: 2px solid #FF66B2;
+  }
+ 
+  /* BOTÃO ENTRAR / CADASTRAR */
+ 
+  .login-btn {
+    margin-top: 30px; /* espaço acima do botão principal */
+    padding: 14px;
+    border: none;
+    border-radius: 5px;
+    background: #FF66B2;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+ 
+  .login-btn:hover {
+    background: #ff4da0;
+  }
+ 
+  /* BOTÃO SECUNDÁRIO (CRIAR CONTA / VOLTAR) */
+ 
+  .register-btn {
+    margin-top: 20px; /* espaço entre os botões */
+    display: block;
+    text-align: center;
+    padding: 14px;
+    border-radius: 5px;
+    background: transparent;
+    border: 2px solid #FF66B2;
+    color: #FF66B2;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+  }
+ 
+  .register-btn:hover {
+    background: #ff2e88;
+    color: white;
+  }
+ 
+  /* FOOTER */
+ 
+  footer {
+    text-align: center;
+    padding: 20px;
+    color: #777;
+    margin-top: auto;
+  }
+ 
+ /* SETA VOLTAR FLUTUANTE */
+.login-container {
+    position: relative; /* necessário para a seta absoluta */
+  }
+ 
+  .back-arrow {
+    position: absolute;
+    top: 20px;       /* distância do topo do card */
+    left: 20px;      /* distância da esquerda do card */
+    font-size: 24px;
+    color: #FF66B2;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+ 
+  .back-arrow:hover {
+    color: #ff4da0;
+    transform: translateX(-3px); /* efeito de movimento ao passar o mouse */
+  }
+
+  .logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1; /* Ocupa espaço na esquerda */
+    flex-shrink: 0;
+}
+
+.logo-img {
+    height: 50px;
+    width: auto;
+}
+
+.logo-text {
+    color: white;
+    font-size: 1.1rem;
+    white-space: nowrap; /* Impede quebra de linha no nome do time */
+    display: flex;
+    align-items: center;
+}
