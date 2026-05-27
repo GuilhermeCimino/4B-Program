@@ -1,8 +1,6 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-
-    /* TOM PRETO MAIS ESCURO */
     background: #050505;
     color: white;
 
@@ -15,8 +13,6 @@ body {
 .hero {
     text-align: center;
     padding: 80px 20px 40px;
-
-    /* MESMO TOM DO SITE */
     background: #050505;
     background-image: none;
 }
@@ -41,10 +37,7 @@ body {
 .ingressos {
     text-align: center;
     padding: 40px;
-
-    /* MESMO TOM */
     background: #050505;
-
     flex: 1;
 }
 
@@ -81,8 +74,6 @@ body {
 
 .ingresso-card:hover {
     transform: translateY(-5px);
-
-    /* EFEITO MAIS SUAVE */
     box-shadow: 0 0 20px rgba(255, 46, 99, 0.15);
 }
 
@@ -122,14 +113,9 @@ body {
 footer {
     padding: 25px;
     text-align: center;
-
-    /* MESMO TOM */
     background: #050505;
-
     border-top: 1px solid #1a1a1a;
-
     color: #777;
-
     margin-top: auto;
     width: 100%;
 }
