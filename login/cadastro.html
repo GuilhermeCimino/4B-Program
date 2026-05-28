@@ -3,24 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <title>Cadastro - H4B F.C.</title>
-    <link rel="stylesheet" href="styleCadastro.css" />
+    <!-- Adicionado tipo para o Electron renderizar com precisão -->
+    <link rel="stylesheet" type="text/css" href="styleCadastro.css" />
   </head>
 
   <body>
     <header>
       <div class="logo-wrapper">
-        <a href="/home.html">
-          <img src="/midia/logo.png" alt="Logo" class="logo-img" />
+        <!-- Corrigido para voltar para a home na raiz do projeto -->
+        <a href="../home.html">
+          <!-- Corrigido para buscar a logo voltando um nível de pasta -->
+          <img src="../midia/logo.png" alt="Logo" class="logo-img" />
         </a>
         <div class="logo-text">
-          <strong>H4B</strong
-          ><span style="color: var(--rosa)">FootBall Club</span>
+          <strong>H4B</strong><span style="color: var(--rosa)">FootBall Club</span>
         </div>
       </div>
     </header>
 
     <div class="login-container">
-      <!-- Setinha de voltar -->
+      <!-- Setinha de voltar para o login (mantida na mesma pasta) -->
       <a href="login.html" class="back-arrow">&#8592;</a>
 
       <h1>Criar Conta</h1>
@@ -64,6 +66,8 @@
     </div>
 
     <footer>2024 H4B FC. Todos os direitos reservados.</footer>
+    
+    <!-- Scripts locais mantidos de forma relativa -->
     <script src="config.js"></script>
     <script src="cadastro.js"></script>
   </body>

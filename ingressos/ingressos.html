@@ -4,16 +4,19 @@
   <meta charset="UTF-8">
   <title>Ingressos - H4B</title>
 
-  <link rel="stylesheet" href="../elenco/elenco.css">
-  <link rel="stylesheet" href="ingressos.css">
+  <!-- Adicionado tipo para o Electron renderizar com precisão -->
+  <link rel="stylesheet" type="text/css" href="../elenco/elenco.css">
+  <link rel="stylesheet" type="text/css" href="ingressos.css">
 </head>
 
 <body>
 
 <header>
     <div class="logo-wrapper">
-        <a href="/home.html">
-            <img src="/midia/logo.png" alt="Logo" class="logo-img">
+        <!-- Corrigido para voltar para a home na raiz do projeto -->
+        <a href="../home.html">
+            <!-- Corrigido para buscar a logo voltando um nível de pasta -->
+            <img src="../midia/logo.png" alt="Logo" class="logo-img">
         </a>
         <div class="logo-text">
             <strong>H4B</strong><span style="color:var(--rosa)">FootBall Club</span>
@@ -21,15 +24,17 @@
     </div>
     
     <nav class="nav-links">
-        <a href="/noticias/noticias.html">Notícias</a>
-        <a href="/jogos/jogos.html">Jogos</a>
-        <a href="/elenco/elenco.html">Elenco</a>
-        <a href="/estadio/estadio.html">Estádio</a>
-        <a href="/ingressos/ingressos.html">Ingressos</a>
-        <a href="/asnobet/asnobet.html">Asnos Bet</a>
+        <!-- Corrigidos os caminhos absolutos para relativos voltando um nível -->
+        <a href="../noticias/noticias.html">Notícias</a>
+        <a href="../jogos/jogos.html">Jogos</a>
+        <a href="../elenco/elenco.html">Elenco</a>
+        <a href="../estadio/estadio.html">Estádio</a>
+        <a href="ingressos.html">Ingressos</a>
+        <a href="../asnobet/asnobet.html">Asnos Bet</a>
     </nav>
 
-    <a href="/ingressos/ingressos.html" class="btn-login">LOGIN</a>
+    <!-- Corrigido para o caminho correto da página de login -->
+    <a href="../login/login.html" class="btn-login">LOGIN</a>
     <button onclick="deslogar()" class="btn-sair">SAIR</button>
 </header>
 
@@ -79,8 +84,8 @@
 <!-- JS DA PÁGINA -->
 <script src="ingressos.js"></script>
 
-<!-- JS DE SESSÃO -->
-<script src="/login/sessao.js"></script>
+<!-- JS DE SESSÃO CORRIGIDO -->
+<script src="../login/sessao.js"></script>
 
 </body>
 </html>

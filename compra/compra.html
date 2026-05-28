@@ -3,24 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <title>Compra - H4B</title>
-  <link rel="stylesheet" href="../elenco/elenco.css">
-  <link rel="stylesheet" href="compra.css">
+
+  <!-- Adicionado tipo para o Electron renderizar os estilos com precisão -->
+  <link rel="stylesheet" type="text/css" href="../elenco/elenco.css">
+  <link rel="stylesheet" type="text/css" href="compra.css">
 </head>
+
 <body>
 
 <header>
     <div class="logo-wrapper">
-<a href="/home.html">
-    <img src="/midia/logo.png" alt="Logo" class="logo-img">
-</a>
+        <!-- Corrigido para voltar para a home na raiz do projeto -->
+        <a href="../home.html">
+            <!-- Corrigido para buscar a logo voltando um nível de pasta -->
+            <img src="../midia/logo.png" alt="Logo" class="logo-img">
+        </a>
+
         <div class="logo-text">
-            <strong>H4B</strong><span style="color:var(--rosa)">FootBall Club</span>
+            <strong>H4B</strong>
+            <span style="color:var(--rosa)">FootBall Club</span>
         </div>
     </div>
 </header>
 
 <section class="compra-box">
+
     <h2>Finalizar Compra</h2>
+
     <p id="infoJogo"></p>
 
     <input type="text" placeholder="Nome completo">
@@ -28,13 +37,37 @@
     <input type="text" placeholder="CPF">
     <input type="text" placeholder="Número do cartão">
 
-    <button class="btn-comprar">Confirmar Compra</button>
+    <button class="btn-comprar" onclick="confirmarCompra()">
+        Confirmar Compra
+    </button>
+
 </section>
+
+<!-- POPUP -->
+<div id="popup-confirmacao" class="popup">
+
+    <div class="popup-content">
+
+        <h2>✅ Compra realizada!</h2>
+
+        <p>
+            Seu ingresso foi confirmado com sucesso.
+        </p>
+
+        <button class="btn-comprar" onclick="fecharPopup()">
+            Fechar
+        </button>
+
+    </div>
+
+</div>
 
 <footer>
     <p>&copy; 2024 H4B FC. Todos os direitos reservados.</p>
 </footer>
 
+<!-- Mantido local e de forma relativa -->
 <script src="compra.js"></script>
+
 </body>
 </html>

@@ -1,0 +1,8 @@
+{
+  "name": "4b-program",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  }
+}
