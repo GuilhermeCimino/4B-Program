@@ -101,9 +101,10 @@ header {
 .hero {
     position: relative;
     height: 75vh;
+    /* CORRIGIDO: Modificado caminho absoluto para relativo para funcionar no executável */
     background:
     linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.9)),
-    url('/midia/estadiodentro.png');
+    url('../midia/estadiodentro.png');
     background-size: cover;
     background-position: center;
     display: flex;

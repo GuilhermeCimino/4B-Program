@@ -16,8 +16,11 @@ function createWindow() {
     }
   });
 
+  // Carrega a página inicial da raiz do projeto
   win.loadFile(path.join(__dirname, 'home.html'));
-  win.webContents.openDevTools();
+
+  // DEVTOOLS DESATIVADO: Linha comentada para o app abrir limpo sem a barra de código do lado!
+  // win.webContents.openDevTools();
 }
 
 app.whenReady().then(() => {
